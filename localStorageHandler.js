@@ -23,4 +23,3 @@ function retrieveData(key){
     }
 }
 
-var storedTableData = retrieveData('tableData');

@@ -8,6 +8,7 @@ It is best if you write your code in a NEW .js file (eg making an index.js for y
 There is no need to optimise any of your code. Pre-Optimisation can be bad most of the times and you can Google about it, but basically don't optimise for 0 customers. You can go for the least efficient, most wordy system ever if you want to, I won't judge.  
 I do not mind if you wish to use a LLM to generate your code (eg ChatGPT or it's alternatives, I won't snitch). Though, use it at your own/the group's risk if you are unable to explain your own code to yourself or the group.  
 If you are unable to find a way to make, for example, A.1.08 be ready for booking or able to be booked at 2pm Real Life time, don't worry. At most we'll just make the video presentation "look like it works at 1:30pm". funny editing :)  
-There will likely be no database. Most of this will either be output into a text file or, well, funny editing part 2. Open to discussion.  
+If you can't code in a way to separate the pages into more than one date (i didn't add it due to time constraints), we can skip that for now and i can try to edit the code after merging  
+Ignore soupClock.js for now, it's an old clock system I did and was wondering if I could add it into the top right of the page, but was afraid of wasting too much time on accessories and not the main course.  
 
 More details to be added here as project progresses

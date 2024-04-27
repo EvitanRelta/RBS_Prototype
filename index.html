@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--script src="soupClock.js"></script-->
     <a href="https://www.uow.edu.au/" target="_blank">
-        <div id="logoHeader">
             <img src=".\images\university-of-wollongong.png" alt="UoW Logo" width="25%" height="25%">
-        </div>
     </a>
     
     <!--This section (debugPanel) is for debug purposes, it should not be uploaded in Final Build-->
@@ -31,6 +30,7 @@
         <button onclick="consoleLogTable()">
             Console.log tables
         </button>
+        <button onclick="tablePopulator()">Refresh Tables</button>
     </div>
 
     <div id="titleHeader">
@@ -48,18 +48,17 @@
             promocode_description_placeholder
         </button>
     </div><br>
-
-    <select id="tableSelector">
-        <option value="table1">table1</option>
-        <option value="table2">table2</option>
+<!-- Might be deprecated. Ignore this sect. unless you have an idea, (which I don't) _(:Ⅰ」∠)-->
+    <select id="tableSelector"> 
+        <option value="table1">27/4/2024</option>
     </select>
 
-    <div id="roomID"></div>
-    <div id="tableContainer"></div>
     
-    <!--script src="soupClock.js"></script-->
+    <div id="tableDisplay"></div>
+
     <script src="localStorageHandler.js"></script>
-    <script src="debugPanel.js"></script>
     <script src="tableCreator.js"></script>
+    <script src="debugPanel.js"></script>
+    
 </body>
 </html>

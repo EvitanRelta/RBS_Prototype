@@ -1,7 +1,8 @@
-var tableStorage = [];
+
 
 // Reinitialises placeholder table 
 function resetTable(){
+    var tableStorage = [];
     tableStorage = [ //Format: RoomCode, PriceInDollars, StartHour, EndHour
       ["A.1.04A", 2.0, 4, 16],
       ["A.2.06A", 6.0, 8, 12],
@@ -47,6 +48,6 @@ function hardReset(){
 
 // Display tables in console
 function consoleLogTable(){
-    storedTableData = retrieveData('tableStorage');
-    console.log('Stored Table Data:', storedTableData);
+    var tableStorage = retrieveData('tableStorage');
+    console.log('Stored Table Data:', tableStorage);
 }
