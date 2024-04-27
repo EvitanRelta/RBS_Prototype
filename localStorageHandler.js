@@ -24,27 +24,3 @@ function retrieveData(key){
 }
 
 var storedTableData = retrieveData('tableData');
-// Reinitialises placeholder table 
-function resetTable(){
-    var tableData = [];
-    tableData = [
-      {id: 0, loc: 'A.1.08A', startTime: 0, endTime: 23},
-      {id: 1, loc: 'B.2.04A', startTime: 0, endTime: 23},
-      {id: 2, loc: 'A.1.08A', startTime: 0, endTime: 23},
-  ]
-  storeData('tableData', tableData);
-  storedTableData = retrieveData('tableData');
-}
-
-// Hard clears table
-function hardReset(){
-  var tableData = [];
-  storeData('tableData', tableData);
-  storedTableData = retrieveData('tableData');
-}
-
-// Display tables in console
-function consoleLogTable(){
-    console.log('Stored Table Data:', storedTableData);
-}
-
