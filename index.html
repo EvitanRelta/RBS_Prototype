@@ -12,17 +12,48 @@
             <img src=".\images\university-of-wollongong.png" alt="UoW Logo" width="25%" height="25%">
         </div>
     </a>
-    <div id="titleButtons">
-        <button>
-            a
+    
+    <!--This section (debugPanel) is for debug purposes, it should not be uploaded in Final Build-->
+    <div id="debugPanel">
+        <div>Debug Panel</div>
+        <button onclick="addTable()">
+            Add Table
         </button>
-        <button>
-            a
+        <!--Use this Button to generate a placeholder table-->
+        <button onclick="resetTable()">
+            Reset Table (Creates placeholder)
+        </button>
+        <!--Use this Button to clear all tables-->
+        <button onclick="hardReset()">
+            Clear Table
+        </button>
+        <!--Use this Button to check tables in console-->
+        <button onclick="consoleLogTable()">
+            Console.log tables
         </button>
     </div>
+
     <div id="titleHeader">
         <p>Room Booking System</p>
+    </div><br>
+
+    <div id="buttonTable">
+        <button class="titleButtons">
+            creation_description_placeholder
+        </button>
+        <button class="titleButtons">
+            modification_description_placeholder
+        </button>
+        <button class="titleButtons">
+            promocode_description_placeholder
+        </button>
     </div>
+    <select id="tableSelect">
+        <option value="table1">Table 1</option>
+        <option value="table2">Table 2</option>
+    </select>
+    
+    <script src="soupClock.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
