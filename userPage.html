@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--script src="soupClock.js"></script-->
+    <a href="https://www.uow.edu.au/" target="_blank">
+            <img src=".\images\university-of-wollongong.png" alt="UoW Logo" width="25%" height="25%">
+    </a>
+    
+    <!--This section (debugPanel) is for debug purposes, it should not be uploaded in Final Build-->
+    <div id="debugPanel">
+        <div>Debug Panel (to be deleted before presenting)</div>
+        <button onclick="addTable()">
+            Add Table
+        </button>
+        <!--Use this Button to generate a placeholder table-->
+        <button onclick="resetTable()">
+            Reset Table (Creates placeholder)
+        </button>
+        <!--Use this Button to clear all tables-->
+        <button onclick="hardReset()">
+            Clear Table
+        </button>
+        <!--Use this Button to check tables in console-->
+        <button onclick="consoleLogTable()">
+            Console.log tables
+        </button>
+        <button onclick="location.reload()">Refresh Tables</button>
+        <a href="staffPage.html"><button>Opens Staff Page</button></a>
+    </div>
+
+    <div id="titleHeader">
+        <p>Room Booking System (User)</p>
+    </div><br>
+
+    <div id = "welcomeHeader">
+        <p>Welcome (user)??</p>
+    </div>
+
+    <div id="buttonTable">
+        <button class="titleButtons">
+            booking_description_placeholder
+        </button>
+        <button class="titleButtons">
+            modification_description_placeholder
+        </button>
+    </div><br>
+
+<!-- Might be deprecated. Ignore this section unless you have an idea. (which I don't) _(:Ⅰ」∠) -->
+    <select id="tableSelector"> 
+        <option value="table1">27/4/2024</option>
+    </select>
+
+<!-- This section is required as tableCreator.js adds stuff into it -->    
+    <div id="tableDisplay"></div>
+
+<!-- In general, your scripts can be anywhere you need it to be, with the exception that scripts 
+    are loaded from TOP earliest and bottom last. 
+    (tableCreator.js will throw errors if it's placed before localStorageHandler.js as it calls a function from there) -->
+    <script src="localStorageHandler.js"></script>
+    <script src="tableCreator.js"></script>
+    <script src="debugPanel.js"></script>
+    
+</body>
+</html>

@@ -1,5 +1,5 @@
 
-// Stores data in localStorage
+// Stores data in localStorage with storeData('nameOfKey',nameOfThingThatContainsData)
 function storeData(key, data){
     try{
       const serializedData = JSON.stringify(data);
@@ -9,7 +9,7 @@ function storeData(key, data){
     }
 }
 
-// Retrieves data in localStorage
+// Retrieves data in localStorage with retrieveData('nameOfKey')
 function retrieveData(key){
     try{
       const serializedData = localStorage.getItem(key);

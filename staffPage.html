@@ -14,7 +14,7 @@
     
     <!--This section (debugPanel) is for debug purposes, it should not be uploaded in Final Build-->
     <div id="debugPanel">
-        <div>Debug Panel</div>
+        <div>Debug Panel (to be deleted before presenting)</div>
         <button onclick="addTable()">
             Add Table
         </button>
@@ -30,12 +30,17 @@
         <button onclick="consoleLogTable()">
             Console.log tables
         </button>
-        <button onclick="tablePopulator()">Refresh Tables</button>
+        <button onclick="location.reload()">Refresh Tables</button>
+        <a href="userPage.html"><button>Opens User Page</button></a>
     </div>
 
     <div id="titleHeader">
-        <p>Room Booking System</p>
+        <p>Room Booking System (Staff)</p>
     </div><br>
+
+    <div id = "welcomeHeader">
+        <p>Welcome (user)??</p>
+    </div>
 
     <div id="buttonTable">
         <button class="titleButtons">
@@ -48,14 +53,18 @@
             promocode_description_placeholder
         </button>
     </div><br>
-<!-- Might be deprecated. Ignore this sect. unless you have an idea, (which I don't) _(:Ⅰ」∠)-->
+
+<!-- Might be deprecated. Ignore this sect. unless you have an idea, (which I don't) _(:Ⅰ」∠) -->
     <select id="tableSelector"> 
         <option value="table1">27/4/2024</option>
     </select>
 
-    
+<!-- This section is required as tableCreator.js adds stuff into it -->    
     <div id="tableDisplay"></div>
 
+<!-- In general, your scripts can be anywhere you need it to be, with the exception that scripts 
+    are loaded from TOP earliest and bottom last. 
+    (tableCreator.js will throw errors if it's placed before localStorageHandler.js as it calls a function from there) -->
     <script src="localStorageHandler.js"></script>
     <script src="tableCreator.js"></script>
     <script src="debugPanel.js"></script>

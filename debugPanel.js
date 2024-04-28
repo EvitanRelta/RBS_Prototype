@@ -14,6 +14,7 @@ function resetTable(){
 
 function addTable(){
     var codeInput = prompt("Room code?");
+    codeInput = codeInput.toUpperCase();
     var priceInput = prompt("price?");
     var startInput = prompt("start time?");
     var endInput = prompt("end time?");
@@ -24,9 +25,9 @@ function addTable(){
     var existsInStorage = false;
 
     tableStorage.forEach(function(storageData) {
-        let storageLower = storageData[0].toLowerCase();
-        let inputLower = roomData[0].toLowerCase();
-        if (storageLower === inputLower) {
+        let storageUpper = storageData[0].toUpperCase();
+        let inputUpper = roomData[0];
+        if (storageUpper === inputUpper) {
             existsInStorage = true;
         }
     });
