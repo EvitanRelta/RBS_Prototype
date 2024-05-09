@@ -1,0 +1,88 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#staff-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#room-functions {
+    margin: 20px auto;
+    width: 80%;
+}
+
+#roomFunctionsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#roomFunctionsTable th, #roomFunctionsTable td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#roomFunctionsTable th {
+    background-color: #f2f2f2;
+}
+
+#room-dropdown {
+    margin: 20px auto;
+    width: 200px;
+    display: block;
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    margin: 5px;
+}
+
+#notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    display: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 30%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 0%, 60%);
+}
+
+.navbar li {
+    float: left;
+}

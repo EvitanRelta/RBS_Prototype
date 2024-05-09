@@ -1,0 +1,23 @@
+1) Room creation for staff
+	-Click on create room to create "Room 1"
+	-Under the dropdown box to select room 1
+2) Editing room for staff members
+	-Once Selected the room, the room function will appear
+	-Select the price, date and time, Adjust capacity accordingly to staff request
+	-Key in promotional code below to see the final price (if do not have code, the price stated will be final price)
+
+There are 3 discount code
+"Student123" which gives a 50 percent discount
+"Staff123" which gives a 40 percent discount
+"UOW123" which gives a 30 percent discount
+input price and promotional code to show the final discounted price
+
+3) Room launch for UOW staff
+	-After editing the room, click on launch room to set the reservation dates
+	-Once the date is reserved, the data will be updated accordingly like "Availability for Reservations: Reserved (2024-04-14)"
+
+4) Repeat new room creation for UOW staff
+	-Once room 1 is created and launched, to create a new room just simply click on add room 
+	-Use the dropdown box to go to room 2 and edit the room function accordingly (It will not mess with the previous room function as tested out)
+	-Once done launched room and add reservation dates
+

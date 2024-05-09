@@ -1,0 +1,27 @@
+Coding HTML instruction for staff
+1) I first set the title using <title> and name it UOW room booking system for staff
+
+2) Then I entered the body which is welcome UOW staff
+
+3) I keyed in the staff section by doing a section id and create a button with button onclick="create room()"
+
+4) then I did the same thing for the room function table
+
+5) I now do a dropdown box to display room details and use a </select> function to call it
+
+6) Then I did all the buttons for room function for example to adjust the price " <button onclick="adjustPrice()">Adjust Price</button>"
+
+7) Then I did the notification popup but using div id
+
+8) Finally I linked it to the java script by using script src="name of javascript file"
+
+
+
+
+Coding CSS instruction for Staff
+
+1) I used a general style found on google which is arial, sans-seril as font and use a blue colour for background and white for words
+
+2) Then I align the words using text-align function
+
+3) as for the notification cause I want to do in on the top, I fixed the position and edit accordingly 

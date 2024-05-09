@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Page Student</title>
+    <link rel="stylesheet" href="styles/studentStyle.css">
+</head>
+<body onload="basePageLoad()">
+    <header>
+        <a id="uow-icon">
+            <img src="images/uow.png" width="250px">
+            <d id = "aftImage">Student(DEBUG)</d>
+        </a>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="pageStudent.html">Book a Room</a></li>
+            <li><a href="pageStudentBookings.html">Manage Bookings</a></li>
+            <li><a href="pageStudentCredit.html">Credit Topup</a></li>
+            <li><a href="menu.html" id="logout">Logout</a></li>
+            <li id="credit-bal"></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h1>Loading page for empty localStorage</h1>
+        </section>
+
+        <section>
+            <button onclick="clearAll()">Clear All localStorage</button> <br><br>
+        </section>
+
+        <section>
+            <label>Test panel</label> <br>
+            <button onclick="addCredit()">Add $10 Credit</button> <br>
+            <button onclick="addPromo()">Add test Promo Codes</button> <br>
+            <button onclick="resetTable()">Add Placeholder Tables</button> <br>
+            <button onclick="addBooking()">Add Placeholder Bookings</button> <br>
+        </section>
+    </main>
+    
+    <script src="src/localStorageHandler.js"></script>
+    <script src="src/studentCredit.js"></script>
+    <script src="src/studentMain.js"></script>
+</body>
+</html>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placeholder Text</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/styleCalvin.css">
 </head>
 <body>
     <!--script src="soupClock.js"></script-->
     <a href="https://www.uow.edu.au/" target="_blank">
-            <img src=".\images\university-of-wollongong.png" alt="UoW Logo" width="25%" height="25%">
+            <img src="./images/uow.png" alt="UoW Logo" width="25%" height="25%">
     </a>
     
     <!--This section (debugPanel) is for debug purposes, it should not be uploaded in Final Build-->
@@ -54,7 +54,7 @@
         </button>
     </div><br>
 
-<!-- Might be deprecated. Ignore this sect. unless you have an idea, (which I don't) _(:Ⅰ」∠) -->
+<!-- Might be deprecated. Ignore this section unless you have an idea, (which I don't) _(:Ⅰ」∠) -->
     <select id="tableSelector"> 
         <option value="table1">27/4/2024</option>
     </select>
@@ -65,9 +65,9 @@
 <!-- In general, your scripts can be anywhere you need it to be, with the exception that scripts 
     are loaded from TOP earliest and bottom last. 
     (tableCreator.js will throw errors if it's placed before localStorageHandler.js as it calls a function from there) -->
-    <script src="localStorageHandler.js"></script>
-    <script src="tableCreator.js"></script>
-    <script src="debugPanel.js"></script>
+    <script src="src/localStorageHandler.js"></script>
+    <script src="src/tableCreator.js"></script>
+    <script src="src/debugPanel.js"></script>
     
 </body>
 </html>

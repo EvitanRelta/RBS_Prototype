@@ -1,0 +1,58 @@
+Coding Functions and instruction for UOW staff
+
+1) For this project, we use sample data as roomsData=[] to hold the data for staff creations rooms
+
+2) To have different types of room for UOW staff (example Computer room, lecture hall)
+	-Simply edit the createroom(roomtype) and set the different types of rooms into the command
+
+3) To add different promotional code and discounts use 
+	-const promoCodes (to make sure the values and code are constant) 
+	-Key in certain promote code and discount example "SIM123": 0.25 which means 25 percent discount
+
+4) To create a room in the UOW code, just function createRoom() and set the functions accordingly like price, date etc etc
+
+5) Then I display the room function table and use style display to get the button we connect the javascript to the html to find the button 
+
+6) Update room function table command once the room is updated according to its new functions (like price, date and time etc)
+
+7) I also added a room number under room details to not be confused by the different rooms
+
+8) I also added a table header while maintaining a constant value like "const headerRow = roomFunctionsTable.insertRow();"
+
+9) So now I add room function to the table by using const functionData= (Function of a room)
+
+10) Then to link the room data inserted to the room selected I use the if function to call the 2 command together
+
+11) To calculate the discounted price I used a const command and use math to calculate the price based of the discounted code
+
+12) So after doing all that I will call the function of room detail to show it in the html 
+
+13) Now for the technical part of adjusting room function details like price, I first use 'if' command to select a room and enter a prompt asking the staff to select a new pricing and set the new price accordingly.
+
+14) This goes the same for date/time, capacity
+
+15) For promotional code, it will be invalied if the staff keys in a code that is not in the command stated above and I used if and else loop to ensure the promotional code is correct
+
+16) For launching of room, I set a prompt for the staff to enter the reservation dates and once its enter to the room data array, reservation will be coded down and the date will be noted on the screen as well, I also set a 3 second notification to prevent crowding of the website with the permenant notification using setTimeout function
+
+17) Lastly I called the room function table and updates it to make sure the website is loaded correctly by using "updateRoomFunctionsTable();"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

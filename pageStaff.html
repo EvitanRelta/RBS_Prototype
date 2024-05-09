@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff - UOW Room Booking System</title>
+    <link rel="stylesheet" href="styles/styleStaff.css"> 
+</head>
+<body>
+    <header>
+        <a id="uow-icon">
+            <img src="images/uow.png" width="250px">
+        </a>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="credit-store.html">Credit Topup</a></li>
+            <li><a href="user-page.html">Book a Room</a></li>
+            <li><a href="manage-bookings.html">Manage Bookings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="staff-section">
+            <h2>Staff Functions</h2>
+            <button onclick="createRoom()">Create Room</button>
+        </section>
+
+        <section id="room-functions" style="display: none;">
+            <h2>Room Functions</h2>
+            <table id="roomFunctionsTable">
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </table>
+        </section>
+
+        <select id="room-dropdown" style="display: none;" onchange="displaySelectedRoom()">
+            <option value="-1">Select Room</option>
+        </select>
+
+        <div class="button-container" style="display: none;">
+            <button onclick="adjustPrice()">Adjust Price</button>
+            <button onclick="adjustDateTime()">Adjust Date/Time</button>
+            <button onclick="managePromoCode()">Manage Promotional Code</button>
+            <button onclick="adjustCapacity()">Adjust Capacity</button>
+            <button onclick="launchRoom()">Launch Room</button>
+        </div>
+
+        <div id="notification"></div>
+        <div id="output"></div>
+    </main>
+
+    <footer></footer>
+
+    <script src="src/staffCode.js"></script>
+</body>
+</html>
