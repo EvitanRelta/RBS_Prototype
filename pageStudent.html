@@ -1,115 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student - UOW Room Booking System</title>
-    <link rel="stylesheet" href="styles/studentStyle.css">
-</head>
-<body onload="upPageLoad()">
-    <header>
-        <a id="uow-icon">
-            <img src="images/uow.png" width="250px">
-            <d id = "aftImage">Student</d>
-        </a>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student - UOW Room Booking System</title>
+        <link rel="stylesheet" href="styles/studentStyle.css" />
+    </head>
+    <body onload="upPageLoad()">
+        <header>
+            <a id="uow-icon">
+                <img src="images/uow.png" width="250px" />
+                <d id="aftImage">Student</d>
+            </a>
+        </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="pageStudent.html">Book a Room</a></li>
-            <li><a href="pageStudentBookings.html">Manage Bookings</a></li>
-            <li><a href="pageStudentCredit.html" id="creditUp">Credit Topup($)</a></li>
-            <li><a href="menu.html" id="logout">Logout</a></li>
-            <li id="credit-bal"></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="pageStudent.html">Book a Room</a></li>
+                <li><a href="pageStudentBookings.html">Manage Bookings</a></li>
+                <li><a href="pageStudentCredit.html" id="creditUp">Credit Topup($)</a></li>
+                <li><a href="menu.html" id="logout">Logout</a></li>
+                <li id="credit-bal"></li>
+            </ul>
+        </nav>
 
-    <main>
-        <section>
-            <br>
-            <form>
-            <input id="date-selector" type="date"> 
-            <select id="room-selector" onchange="roomSelector()">
-                <option selected disabled hidden>Select room</option>
-                <option id="td-option0" value=""></option><option id="td-option1" value=""></option>
-                <option id="td-option2" value=""></option><option id="td-option3" value=""></option>
-                <option id="td-option4" value=""></option><option id="td-option5" value=""></option>
-                <option id="td-option6" value=""></option><option id="td-option7" value=""></option>
-                <option id="td-option8" value=""></option><option id="td-option9" value=""></option>
-                <option id="td-option10" value=""></option><option id="td-option11" value=""></option>
-                <option id="td-option12" value=""></option><option id="td-option13" value=""></option>
-                <option id="td-option14" value=""></option><option id="td-option15" value=""></option>
-                <option id="td-option16" value=""></option><option id="td-option17" value=""></option>
-                <option id="td-option18" value=""></option><option id="td-option19" value=""></option>
-            </select>
-            </form>
-            <br>
-        </section>
+        <main>
+            <section>
+                <br />
+                <form>
+                    <input id="date-selector" type="date" />
+                    <select id="room-selector" onchange="roomSelector()">
+                        <option selected disabled hidden>Select room</option>
+                        <option id="td-option0" value=""></option>
+                        <option id="td-option1" value=""></option>
+                        <option id="td-option2" value=""></option>
+                        <option id="td-option3" value=""></option>
+                        <option id="td-option4" value=""></option>
+                        <option id="td-option5" value=""></option>
+                        <option id="td-option6" value=""></option>
+                        <option id="td-option7" value=""></option>
+                        <option id="td-option8" value=""></option>
+                        <option id="td-option9" value=""></option>
+                        <option id="td-option10" value=""></option>
+                        <option id="td-option11" value=""></option>
+                        <option id="td-option12" value=""></option>
+                        <option id="td-option13" value=""></option>
+                        <option id="td-option14" value=""></option>
+                        <option id="td-option15" value=""></option>
+                        <option id="td-option16" value=""></option>
+                        <option id="td-option17" value=""></option>
+                        <option id="td-option18" value=""></option>
+                        <option id="td-option19" value=""></option>
+                    </select>
+                </form>
+                <br />
+            </section>
 
-        <section class="tableFontTest">
-            <table bgcolor="black" width="100%" border="0.5">
-                <colgroup>
-                    <col width="8%"><col width="8%"><col width="8%"><col width="8%">
-                    <col width="8%"><col width="8%"><col width="8%"><col width="8%">
-                    <col width="8%"><col width="8%"><col width="8%"><col width="8%">
-                </colgroup>
+            <section class="tableFontTest">
+                <table bgcolor="black" width="100%" border="0.5">
+                    <colgroup>
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                        <col width="8%" />
+                    </colgroup>
 
-                <tr bgcolor="white">
-                    <td colspan=6 id="td-code">Room Code:</td>
-                    <td colspan=6 id="td-price">Price: /hr</td>
-                </tr>
+                    <tr bgcolor="white">
+                        <td colspan="6" id="td-code">Room Code:</td>
+                        <td colspan="6" id="td-price">Price: /hr</td>
+                    </tr>
 
-                <tr bgcolor="grey" align="center">
-                    <td colspan=1>0000</td><td colspan=1>0100</td><td colspan=1>0200</td>
-                    <td colspan=1>0300</td><td colspan=1>0400</td><td colspan=1>0500</td>
-                    <td colspan=1>0600</td><td colspan=1>0700</td><td colspan=1>0800</td>
-                    <td colspan=1>0900</td><td colspan=1>1000</td><td colspan=1>1100</td>
-                </tr>
+                    <tr bgcolor="grey" align="center">
+                        <td colspan="1">0000</td>
+                        <td colspan="1">0100</td>
+                        <td colspan="1">0200</td>
+                        <td colspan="1">0300</td>
+                        <td colspan="1">0400</td>
+                        <td colspan="1">0500</td>
+                        <td colspan="1">0600</td>
+                        <td colspan="1">0700</td>
+                        <td colspan="1">0800</td>
+                        <td colspan="1">0900</td>
+                        <td colspan="1">1000</td>
+                        <td colspan="1">1100</td>
+                    </tr>
 
-                <tr bgcolor="lightgrey" align="center">
-                    <td colspan=1 id="td-time-00"><button class="time-btn" id="td-button-00"></button></td>
-                    <td colspan=1 id="td-time-01"><button class="time-btn" id="td-button-01"> </button></td>
-                    <td colspan=1 id="td-time-02"><button class="time-btn" id="td-button-02"> </button></td>
-                    <td colspan=1 id="td-time-03"><button class="time-btn" id="td-button-03"> </button></td>
-                    <td colspan=1 id="td-time-04"><button class="time-btn" id="td-button-04"> </button></td>
-                    <td colspan=1 id="td-time-05"><button class="time-btn" id="td-button-05"> </button></td>
-                    <td colspan=1 id="td-time-06"><button class="time-btn" id="td-button-06"> </button></td>
-                    <td colspan=1 id="td-time-07"><button class="time-btn" id="td-button-07"> </button></td>
-                    <td colspan=1 id="td-time-08"><button class="time-btn" id="td-button-08"> </button></td>
-                    <td colspan=1 id="td-time-09"><button class="time-btn" id="td-button-09"> </button></td>
-                    <td colspan=1 id="td-time-10"><button class="time-btn" id="td-button-10"> </button></td>
-                    <td colspan=1 id="td-time-11"><button class="time-btn" id="td-button-11"> </button></td>
-                </tr>
+                    <tr bgcolor="lightgrey" align="center">
+                        <td colspan="1" id="td-time-00">
+                            <button class="time-btn" id="td-button-00"></button>
+                        </td>
+                        <td colspan="1" id="td-time-01">
+                            <button class="time-btn" id="td-button-01"></button>
+                        </td>
+                        <td colspan="1" id="td-time-02">
+                            <button class="time-btn" id="td-button-02"></button>
+                        </td>
+                        <td colspan="1" id="td-time-03">
+                            <button class="time-btn" id="td-button-03"></button>
+                        </td>
+                        <td colspan="1" id="td-time-04">
+                            <button class="time-btn" id="td-button-04"></button>
+                        </td>
+                        <td colspan="1" id="td-time-05">
+                            <button class="time-btn" id="td-button-05"></button>
+                        </td>
+                        <td colspan="1" id="td-time-06">
+                            <button class="time-btn" id="td-button-06"></button>
+                        </td>
+                        <td colspan="1" id="td-time-07">
+                            <button class="time-btn" id="td-button-07"></button>
+                        </td>
+                        <td colspan="1" id="td-time-08">
+                            <button class="time-btn" id="td-button-08"></button>
+                        </td>
+                        <td colspan="1" id="td-time-09">
+                            <button class="time-btn" id="td-button-09"></button>
+                        </td>
+                        <td colspan="1" id="td-time-10">
+                            <button class="time-btn" id="td-button-10"></button>
+                        </td>
+                        <td colspan="1" id="td-time-11">
+                            <button class="time-btn" id="td-button-11"></button>
+                        </td>
+                    </tr>
 
-                <tr bgcolor="grey" align="center">
-                    <td colspan=1>1200</td><td colspan=1>1300</td><td colspan=1>1400</td>
-                    <td colspan=1>1500</td><td colspan=1>1600</td><td colspan=1>1700</td>
-                    <td colspan=1>1800</td><td colspan=1>1900</td><td colspan=1>2000</td>
-                    <td colspan=1>2100</td><td colspan=1>2200</td><td colspan=1>2300</td>
-                </tr>
-                
-                <tr bgcolor="lightgrey" align="center">
-                    <td colspan=1 id="td-time-12"><button class="time-btn" id="td-button-12"> </button></td>
-                    <td colspan=1 id="td-time-13"><button class="time-btn" id="td-button-13"> </button></td>
-                    <td colspan=1 id="td-time-14"><button class="time-btn" id="td-button-14"> </button></td>
-                    <td colspan=1 id="td-time-15"><button class="time-btn" id="td-button-15"> </button></td>
-                    <td colspan=1 id="td-time-16"><button class="time-btn" id="td-button-16"> </button></td>
-                    <td colspan=1 id="td-time-17"><button class="time-btn" id="td-button-17"> </button></td>
-                    <td colspan=1 id="td-time-18"><button class="time-btn" id="td-button-18"> </button></td>
-                    <td colspan=1 id="td-time-19"><button class="time-btn" id="td-button-19"> </button></td>
-                    <td colspan=1 id="td-time-20"><button class="time-btn" id="td-button-20"> </button></td>
-                    <td colspan=1 id="td-time-21"><button class="time-btn" id="td-button-21"> </button></td>
-                    <td colspan=1 id="td-time-22"><button class="time-btn" id="td-button-22"> </button></td>
-                    <td colspan=1 id="td-time-23"><button class="time-btn" id="td-button-23"> </button></td>
-                </tr>
-            </table>
-        </section>
-    </main>
+                    <tr bgcolor="grey" align="center">
+                        <td colspan="1">1200</td>
+                        <td colspan="1">1300</td>
+                        <td colspan="1">1400</td>
+                        <td colspan="1">1500</td>
+                        <td colspan="1">1600</td>
+                        <td colspan="1">1700</td>
+                        <td colspan="1">1800</td>
+                        <td colspan="1">1900</td>
+                        <td colspan="1">2000</td>
+                        <td colspan="1">2100</td>
+                        <td colspan="1">2200</td>
+                        <td colspan="1">2300</td>
+                    </tr>
 
-    <footer></footer>
+                    <tr bgcolor="lightgrey" align="center">
+                        <td colspan="1" id="td-time-12">
+                            <button class="time-btn" id="td-button-12"></button>
+                        </td>
+                        <td colspan="1" id="td-time-13">
+                            <button class="time-btn" id="td-button-13"></button>
+                        </td>
+                        <td colspan="1" id="td-time-14">
+                            <button class="time-btn" id="td-button-14"></button>
+                        </td>
+                        <td colspan="1" id="td-time-15">
+                            <button class="time-btn" id="td-button-15"></button>
+                        </td>
+                        <td colspan="1" id="td-time-16">
+                            <button class="time-btn" id="td-button-16"></button>
+                        </td>
+                        <td colspan="1" id="td-time-17">
+                            <button class="time-btn" id="td-button-17"></button>
+                        </td>
+                        <td colspan="1" id="td-time-18">
+                            <button class="time-btn" id="td-button-18"></button>
+                        </td>
+                        <td colspan="1" id="td-time-19">
+                            <button class="time-btn" id="td-button-19"></button>
+                        </td>
+                        <td colspan="1" id="td-time-20">
+                            <button class="time-btn" id="td-button-20"></button>
+                        </td>
+                        <td colspan="1" id="td-time-21">
+                            <button class="time-btn" id="td-button-21"></button>
+                        </td>
+                        <td colspan="1" id="td-time-22">
+                            <button class="time-btn" id="td-button-22"></button>
+                        </td>
+                        <td colspan="1" id="td-time-23">
+                            <button class="time-btn" id="td-button-23"></button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </main>
 
-    <script src="src/localStorageHandler.js"></script>
-    <script src="src/studentCredit.js"></script>
-    <script src="src/studentMain.js"></script>
-</body>
+        <footer></footer>
+
+        <script src="src/localStorageHandler.js"></script>
+        <script src="src/studentCredit.js"></script>
+        <script src="src/studentMain.js"></script>
+    </body>
 </html>

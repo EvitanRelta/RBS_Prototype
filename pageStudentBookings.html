@@ -1,87 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Bookings - UOW Room Booking System</title>
-    <link rel="stylesheet" href="styles/studentStyle.css">
-</head>
-<body onload="mbPageLoad()">
-    <header>
-        <a id="uow-icon">
-            <img src="images/uow.png" width="250px">
-            <d id = "aftImage">Student</d>
-        </a>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Manage Bookings - UOW Room Booking System</title>
+        <link rel="stylesheet" href="styles/studentStyle.css" />
+    </head>
+    <body onload="mbPageLoad()">
+        <header>
+            <a id="uow-icon">
+                <img src="images/uow.png" width="250px" />
+                <d id="aftImage">Student</d>
+            </a>
+        </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="pageStudent.html">Book a Room</a></li>
-            <li><a href="pageStudentBookings.html">Manage Bookings</a></li>
-            <li><a href="pageStudentCredit.html" id="creditUp">Credit Topup($)</a></li>
-            <li><a href="menu.html" id="logout">Logout</a></li>
-            <li id="credit-bal"></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="pageStudent.html">Book a Room</a></li>
+                <li><a href="pageStudentBookings.html">Manage Bookings</a></li>
+                <li><a href="pageStudentCredit.html" id="creditUp">Credit Topup($)</a></li>
+                <li><a href="menu.html" id="logout">Logout</a></li>
+                <li id="credit-bal"></li>
+            </ul>
+        </nav>
 
-    <main>
-        <section> <br>
-            <label>Room Booking:</label>
-            <select id="booking-selector" onchange="bookingSelector()">
-                <option selected disabled hidden>Select booking</option>
-                <option id="mb-room0" value=""></option><option id="mb-room1" value=""></option>
-                <option id="mb-room2" value=""></option><option id="mb-room3" value=""></option>
-                <option id="mb-room4" value=""></option><option id="mb-room5" value=""></option>
-                <option id="mb-room6" value=""></option><option id="mb-room7" value=""></option>
-                <option id="mb-room8" value=""></option><option id="mb-room9" value=""></option>
-                <option id="mb-room10" value=""></option><option id="mb-room11" value=""></option>
-                <option id="mb-room12" value=""></option><option id="mb-room13" value=""></option>
-                <option id="mb-room14" value=""></option><option id="mb-room15" value=""></option>
-                <option id="mb-room16" value=""></option><option id="mb-room17" value=""></option>
-                <option id="mb-room18" value=""></option><option id="mb-room19" value=""></option>
-            </select>
-            <br><br>
-        </section>
+        <main>
+            <section>
+                <br />
+                <label>Room Booking:</label>
+                <select id="booking-selector" onchange="bookingSelector()">
+                    <option selected disabled hidden>Select booking</option>
+                    <option id="mb-room0" value=""></option>
+                    <option id="mb-room1" value=""></option>
+                    <option id="mb-room2" value=""></option>
+                    <option id="mb-room3" value=""></option>
+                    <option id="mb-room4" value=""></option>
+                    <option id="mb-room5" value=""></option>
+                    <option id="mb-room6" value=""></option>
+                    <option id="mb-room7" value=""></option>
+                    <option id="mb-room8" value=""></option>
+                    <option id="mb-room9" value=""></option>
+                    <option id="mb-room10" value=""></option>
+                    <option id="mb-room11" value=""></option>
+                    <option id="mb-room12" value=""></option>
+                    <option id="mb-room13" value=""></option>
+                    <option id="mb-room14" value=""></option>
+                    <option id="mb-room15" value=""></option>
+                    <option id="mb-room16" value=""></option>
+                    <option id="mb-room17" value=""></option>
+                    <option id="mb-room18" value=""></option>
+                    <option id="mb-room19" value=""></option>
+                </select>
+                <br /><br />
+            </section>
 
-        <section>
-            <table bgcolor="black" width="40%" border="0.5">
-                <colgroup>
-                    <col width="45%"><col width="55%">
-                </colgroup>
+            <section>
+                <table bgcolor="black" width="40%" border="0.5">
+                    <colgroup>
+                        <col width="45%" />
+                        <col width="55%" />
+                    </colgroup>
 
-                <tr bgcolor="white">
-                    <td>Room Code:</td>
-                    <td id="mb-code"></td>
-                </tr>
+                    <tr bgcolor="white">
+                        <td>Room Code:</td>
+                        <td id="mb-code"></td>
+                    </tr>
 
-                <tr bgcolor="lightgrey">
-                    <td>Price:</td>
-                    <td id="mb-price"></td>
-                </tr>
-                
-                <tr bgcolor="white">
-                    <td>Time Start:</td>
-                    <td id="mb-start"></td>
-                </tr>
-                
-                <tr bgcolor="lightgrey">
-                    <td>Time End:</td>
-                    <td id="mb-end"></td>
-                </tr>
-                
-                <tr bgcolor="black">
-                    <td colspan="2">
-                        <button id="cancel-btn" onclick="cancelBooking()">Cancel Booking</button>
-                    </td>
-                </tr>
-            </table>
-        </section>
-    </main>
+                    <tr bgcolor="lightgrey">
+                        <td>Price:</td>
+                        <td id="mb-price"></td>
+                    </tr>
 
-    <footer></footer>
-    
-    <script src="src/localStorageHandler.js"></script>
-    <script src="src/studentCredit.js"></script>
-    <script src="src/studentBooking.js"></script>
-</body>
+                    <tr bgcolor="white">
+                        <td>Time Start:</td>
+                        <td id="mb-start"></td>
+                    </tr>
+
+                    <tr bgcolor="lightgrey">
+                        <td>Time End:</td>
+                        <td id="mb-end"></td>
+                    </tr>
+
+                    <tr bgcolor="black">
+                        <td colspan="2">
+                            <button id="cancel-btn" onclick="cancelBooking()">
+                                Cancel Booking
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+
+        <footer></footer>
+
+        <script src="src/localStorageHandler.js"></script>
+        <script src="src/studentCredit.js"></script>
+        <script src="src/studentBooking.js"></script>
+    </body>
 </html>

@@ -1,94 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Credit - UOW Room Booking System</title>
-    <link rel="stylesheet" href="styles/studentStyle.css">
-    <script src="https://kit.fontawesome.com/2c4c7f8485.js" crossorigin="anonymous"></script>
-</head>
-<body onload="csPageLoad()">
-    <header>
-        <a id="uow-icon">
-            <img src="images/uow.png" width="250px">
-            <d id = "aftImage">Student</d>
-        </a>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add Credit - UOW Room Booking System</title>
+        <link rel="stylesheet" href="styles/studentStyle.css" />
+        <script src="https://kit.fontawesome.com/2c4c7f8485.js" crossorigin="anonymous"></script>
+    </head>
+    <body onload="csPageLoad()">
+        <header>
+            <a id="uow-icon">
+                <img src="images/uow.png" width="250px" />
+                <d id="aftImage">Student</d>
+            </a>
+        </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="pageStudent.html">Book a Room</a></li>
-            <li><a href="pageStudentBookings.html">Manage Bookings</a></li>
-            <li><a href="pageStudentCredit.html" id="creditUp">Credit Topup($)</a></li>
-            <li><a href="menu.html" id="logout">Logout</a></li>
-            <li id="credit-bal"></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="pageStudent.html">Book a Room</a></li>
+                <li><a href="pageStudentBookings.html">Manage Bookings</a></li>
+                <li><a href="pageStudentCredit.html" id="creditUp">Credit Topup($)</a></li>
+                <li><a href="menu.html" id="logout">Logout</a></li>
+                <li id="credit-bal"></li>
+            </ul>
+        </nav>
 
-    <main>
-        <section>
-            <h1>Top up Credits</h1> <hr> <br>
-    
-            <div>
-                <label>Choose amount:</label>
-                <br>
-                <form>
-                    <input class="credits-topup" type="radio" id="credit-topup-1" name="credits-topup-btn" value="10">
+        <main>
+            <section>
+                <h1>Top up Credits</h1>
+                <hr />
+                <br />
+
+                <div>
+                    <label>Choose amount:</label>
+                    <br />
+                    <form>
+                        <input
+                            class="credits-topup"
+                            type="radio"
+                            id="credit-topup-1"
+                            name="credits-topup-btn"
+                            value="10"
+                        />
                         <label for="credit-topup-1">$10</label>
-                    <input class="credits-topup" type="radio" id="credit-topup-2" name="credits-topup-btn" value="20">
+                        <input
+                            class="credits-topup"
+                            type="radio"
+                            id="credit-topup-2"
+                            name="credits-topup-btn"
+                            value="20"
+                        />
                         <label for="credit-topup-2">$20</label>
-                    <input class="credits-topup" type="radio" id="credit-topup-3" name="credits-topup-btn" value="50">
+                        <input
+                            class="credits-topup"
+                            type="radio"
+                            id="credit-topup-3"
+                            name="credits-topup-btn"
+                            value="50"
+                        />
                         <label for="credit-topup-3">$50</label>
-                    <input class="credits-topup" type="radio" id="credit-topup-4" name="credits-topup-btn" value="100">
+                        <input
+                            class="credits-topup"
+                            type="radio"
+                            id="credit-topup-4"
+                            name="credits-topup-btn"
+                            value="100"
+                        />
                         <label for="credit-topup-4">$100</label>
-                </form>
-            </div> <br>
-            
-            <div>
-                <label>Promotion Code:</label> <br>
-                <input id="promo-code" type="text">
-                <button type="button" onclick=checkPromo()>Validate Code</button>
-                <label id="promoConfirm"></label>
-            </div> <br>
+                    </form>
+                </div>
+                <br />
 
-            <div>
-                <label>Payment Method:</label>
-                <br>
-                <form>
-                    <input class="payment-methods" type="radio" id="payment-method-1" name="payment-icon" onclick="pmFunction()">
-                        <label for="payment-method-1"><i class="fa-brands fa-cc-mastercard"></i></label>
-                    <input class="payment-methods" type="radio" id="payment-method-2" name="payment-icon" onclick="pmFunction()">
+                <div>
+                    <label>Promotion Code:</label> <br />
+                    <input id="promo-code" type="text" />
+                    <button type="button" onclick="checkPromo()">Validate Code</button>
+                    <label id="promoConfirm"></label>
+                </div>
+                <br />
+
+                <div>
+                    <label>Payment Method:</label>
+                    <br />
+                    <form>
+                        <input
+                            class="payment-methods"
+                            type="radio"
+                            id="payment-method-1"
+                            name="payment-icon"
+                            onclick="pmFunction()"
+                        />
+                        <label for="payment-method-1"
+                            ><i class="fa-brands fa-cc-mastercard"></i
+                        ></label>
+                        <input
+                            class="payment-methods"
+                            type="radio"
+                            id="payment-method-2"
+                            name="payment-icon"
+                            onclick="pmFunction()"
+                        />
                         <label for="payment-method-2"><i class="fa-brands fa-cc-visa"></i></label>
-                    <input class="payment-methods" type="radio" id="payment-method-3" name="payment-icon" onclick="pmFunction()">
+                        <input
+                            class="payment-methods"
+                            type="radio"
+                            id="payment-method-3"
+                            name="payment-icon"
+                            onclick="pmFunction()"
+                        />
                         <label for="payment-method-3"><i class="fa-solid fa-qrcode"></i></label>
-                </form>
-                <br><br>
-                <div id="payment-info-card" style="display: none;">
-                    <label>Card number</label> <br>
-                    <input type="text" placeholder="1234 1234 1234 1234"> <br><br>
-                    <label>Expiry(MM/YY)</label> <br>
-                    <input type="text" placeholder="MM/YY" pattern="[0-9]{2}-[0-9]{2}"> <br><br>
-                    <label>CVV</label> <br>
-                    <input type="password" placeholder="●●●"> <br><br>
-                    <label>Name on Card</label> <br>
-                    <input type="text" placeholder="James Tan"> <br><br>
+                    </form>
+                    <br /><br />
+                    <div id="payment-info-card" style="display: none">
+                        <label>Card number</label> <br />
+                        <input type="text" placeholder="1234 1234 1234 1234" /> <br /><br />
+                        <label>Expiry(MM/YY)</label> <br />
+                        <input type="text" placeholder="MM/YY" pattern="[0-9]{2}-[0-9]{2}" />
+                        <br /><br />
+                        <label>CVV</label> <br />
+                        <input type="password" placeholder="●●●" /> <br /><br />
+                        <label>Name on Card</label> <br />
+                        <input type="text" placeholder="James Tan" /> <br /><br />
+                    </div>
+                    <div id="payment-info-qr" style="display: none">
+                        <label>Scan to pay:</label> <br />
+                        <img src="images/qr-code.png" width="200px" /> <br /><br />
+                    </div>
                 </div>
-                <div id="payment-info-qr" style="display: none;">
-                    <label>Scan to pay:</label> <br>
-                    <img src="images/qr-code.png" width="200px"> <br><br>
+
+                <div>
+                    <button onclick="creditConfirm()">Confirmation</button>
                 </div>
-            </div>
+            </section>
+        </main>
 
-            <div>
-                <button onclick="creditConfirm()">Confirmation</button>
-            </div>
-        </section>
-    </main>
+        <footer></footer>
 
-    <footer></footer>
-
-    <script src="src/localStorageHandler.js"></script>
-    <script src="src/studentCredit.js"></script>
-    
-</body>
+        <script src="src/localStorageHandler.js"></script>
+        <script src="src/studentCredit.js"></script>
+    </body>
 </html>

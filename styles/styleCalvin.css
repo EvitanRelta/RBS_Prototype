@@ -1,63 +1,63 @@
-body{
+body {
     font-family: Calibri;
 }
 
-#titleHeader{
-    display:table;
-    outline:1px solid black;
-    background-color:#f0c997;
+#titleHeader {
+    display: table;
+    outline: 1px solid black;
+    background-color: #f0c997;
     border-radius: 15px;
-    overflow:hidden;
+    overflow: hidden;
     padding: 5px 20px;
-    line-height:5px;
+    line-height: 5px;
     font-weight: bold;
     font-size: 20px;
 }
 
-#welcomeHeader{
+#welcomeHeader {
     font-size: 20px;
 }
 
-#debugPanel{
-    display:table;
-    outline:1px solid black;
-    background-color:rgb(196, 255, 255);
+#debugPanel {
+    display: table;
+    outline: 1px solid black;
+    background-color: rgb(196, 255, 255);
     border-radius: 15px;
-    overflow:hidden;
+    overflow: hidden;
     padding: 5px 20px;
     font-weight: bold;
     font-size: 20px;
 }
 
-#buttonTable{
-    font-size:0;
+#buttonTable {
+    font-size: 0;
 }
 
-table,th,td{
+table,
+th,
+td {
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-
-.tableTitles{
-    display:table;
-    outline:1px solid black;
-    background-color:#edf2a5;
-    overflow:hidden;
+.tableTitles {
+    display: table;
+    outline: 1px solid black;
+    background-color: #edf2a5;
+    overflow: hidden;
     padding: 10px;
     width: 300px;
-    line-height:5px;
+    line-height: 5px;
     font-weight: bold;
     font-size: 20px;
-
 }
 
-.tableTemp{
+.tableTemp {
     table-layout: fixed;
     width: 100%;
 }
 
-.titleButtons{
+.titleButtons {
     background-color: rgb(224, 224, 224);
     color: black;
     padding: 15px;
@@ -69,6 +69,6 @@ table,th,td{
     cursor: pointer;
 }
 
-.titleButtons:hover{
+.titleButtons:hover {
     background-color: rgb(216, 216, 216);
 }
